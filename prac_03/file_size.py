@@ -5,11 +5,14 @@ CP1404 Prac03 File size
 
 def main():
     """Get file name and display number of line in file."""
-    file_name = input("File name: ")
-    while file_name != "":
-        file_size = determine_file_size(file_name)
-        print(f"{file_name} has {file_size} lines.")
-        file_name = input("File name: ")
+    filename = input("Enter filename: ")
+    while filename != "":
+        try:
+            file_size = determine_file_size(filename)
+            print(f"{filename} has {file_size} lines.")
+        except FileNotFoundError:
+            print(f"ERROR: {filename} does not exist.")
+        filename = input("Enter filename: ")
 
 
 def determine_file_size(file_name):
