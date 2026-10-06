@@ -1,3 +1,6 @@
+"""
+CP1404 Prac03
+"""
 import random
 
 # On line 1, I saw 15. The smallest is 5. The largest is 20
